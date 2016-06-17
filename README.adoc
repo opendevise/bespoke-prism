@@ -1,3 +1,76 @@
 = bespoke-highlight-prism
+<<<<<<< 00cff36e4d3339130a9709577d1a6e06ff9d8acc
 
 Work in progress...
+=======
+Hubert Sablonnière <https://github.com/hsablonniere>
+// Settings:
+:idprefix:
+:idseparator: -
+//ifdef::env-github[:badges:]
+// Variables:
+:release-version: master
+// URIs:
+:uri-raw-file-base: https://raw.githubusercontent.com/opendevise/bespoke-highlight-prism/{release-version}
+
+ifdef::badges[]
+image:https://img.shields.io/npm/v/bespoke-highlight-prism.svg[npm package, link=https://www.npmjs.com/package/bespoke-highlight-prism]
+image:https://img.shields.io/travis/opendevise/bespoke-highlight-prism/master.svg[Build Status (Travis CI), link=https://travis-ci.org/opendevise/bespoke-highlight-prism]
+endif::[]
+
+Highlights code examples with prismjs in a https://github.com/bespokejs/bespoke[Bespoke.js] presentation.
+
+== Example
+
+http://opendevise.github.io/bespoke-highlight-prism[View the demo] online.
+
+This repository includes a demo folder that shows this plugin in action.
+To view it locally, you first need to clone this repository:
+
+ $ git clone https://github.com/opendevise/bespoke-highlight-prism && cd bespoke-highlight-prism
+
+Next, install the dependencies inside the project folder using npm:
+
+ $ npm install
+
+Finally, visit the file [path]_demo/index.html_ in your browser to see the plugin in action.
+
+== Download
+
+Download the {uri-raw-file-base}/dist/bespoke-highlight-prism.min.js[production mode version] or the {uri-raw-file-base}/dist/bespoke-highlight-prism.js[development mode version], or use a package manager.
+
+=== npm
+
+ $ npm install bespoke-highlight-prism
+
+=== Bower
+
+ $ bower install bespoke-highlight-prism
+
+== Usage
+
+This plugin is shipped in a https://github.com/umdjs/umd[UMD format], meaning it is available as a CommonJS/AMD module or as a browser global.
+
+For example, when using CommonJS modules:
+
+```js
+var bespoke = require('bespoke'),
+  highlightPrism = require('bespoke-highlight-prism');
+
+bespoke.from('.deck', [
+  highlightPrism()
+]);
+```
+
+When using a browser global:
+
+```js
+bespoke.from('.deck', [
+  bespoke.plugins.highlightPrism()
+]);
+```
+
+== License
+
+http://en.wikipedia.org/wiki/MIT_License[MIT License]
+>>>>>>> feat: init plugin with PrismJS theme and plugins

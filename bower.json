@@ -1,0 +1,10 @@
+{
+  "name": "bespoke-highlight-prism",
+  "main": "./dist/bespoke-highlight-prism.js",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "bespoke.js": ">=1.0.0"
+  }
+}
