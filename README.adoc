@@ -14,7 +14,7 @@ image:https://img.shields.io/npm/v/bespoke-highlight.svg[npm package, link=https
 image:https://img.shields.io/travis/opendevise/bespoke-highlight/master.svg[Build Status (Travis CI), link=https://travis-ci.org/opendevise/bespoke-highlight]
 endif::[]
 
-Highlights code examples with prismjs in a https://github.com/bespokejs/bespoke[Bespoke.js] presentation.
+Highlights source code examples in a https://github.com/bespokejs/bespoke[Bespoke.js] presentation using Prism.
 
 == Example
 
