@@ -3,12 +3,17 @@ var pkg = require('./package.json'),
   browserify = require('browserify'),
   stringify = require('stringify'),
   buffer = require('vinyl-buffer'),
+  concat = require('gulp-concat'),
   del = require('del'),
   gulp = require('gulp'),
+  gutil = require('gulp-util'),
   header = require('gulp-header'),
   jshint = require('gulp-jshint'),
   karma = require('karma'),
+  ghpages = require('gh-pages'),
+  path = require('path'),
   rename = require('gulp-rename'),
+  replace = require('gulp-replace'),
   source = require('vinyl-source-stream'),
   uglify = require('gulp-uglify');
 
@@ -63,4 +68,34 @@ gulp.task('compile', ['clean'], function () {
       '<%= license %> License */\n'
     ].join(''), pkg))
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('compile:demo', ['compile:demo:css', 'compile:demo:html', 'compile:demo:js']);
+
+gulp.task('compile:demo:css', ['clean'], function() {
+  return gulp.src('demo/style.css')
+    .pipe(gulp.dest('demo/dist'));
+});
+
+gulp.task('compile:demo:html', ['clean'], function() {
+  return gulp.src('demo/index.html')
+    .pipe(replace(/<\/article>[\s\S]*?<script src="demo.js"><\/script>/, '</article>\n<script src="build.js"></script>'))
+    .pipe(gulp.dest('demo/dist'));
+});
+
+gulp.task('compile:demo:js', ['compile'], function() {
+  return gulp.src([
+    'node_modules/bespoke/dist/bespoke.js',
+    'node_modules/bespoke-classes/dist/bespoke-classes.js',
+    'node_modules/bespoke-nav/dist/bespoke-nav.js',
+    'dist/bespoke-highlight.js',
+    'demo/demo.js'
+  ])
+    .pipe(concat('build.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('demo/dist'));
+});
+
+gulp.task('deploy', ['compile:demo'], function(done) {
+  ghpages.publish(path.join(__dirname, 'demo/dist'), { logger: gutil.log }, done);
 });
