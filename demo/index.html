@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>bespoke-highlight demo</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<article class="deck">
+  <section>
+    <h1>bespoke-highlight</h1>
+  </section>
+  <section>
+        <pre><code class="language-javascript">
+          function foobar(text) {
+            console.log(text):
+          }
+
+          foobar('It works with JavaScript!');
+        </code></pre>
+  </section>
+  <section>
+    <script type="text/plain" class="lang-markup">
+      <!-- It also works with HTML!! -->
+
+      <p class="message">
+        To avoid manual HTML escaping, we use
+        PrismJS "unescaped-markup" plugin.
+      </p>
+
+      <ul class="useless-list">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+    </script>
+  </section>
+  <section>
+    <p>A lot of <a href="http://prismjs.com/#languages-list">languages</a> are supported!</p>
+  </section>
+</article>
+<script src="../node_modules/bespoke/dist/bespoke.js"></script>
+<script src="../node_modules/bespoke-classes/dist/bespoke-classes.js"></script>
+<script src="../node_modules/bespoke-nav/dist/bespoke-nav.js"></script>
+<script src="../dist/bespoke-highlight.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>
