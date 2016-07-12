@@ -1,11 +1,12 @@
 = bespoke-highlight
 Hubert Sablonnière <https://github.com/hsablonniere>
+v1.0.0, 2016-07-12
 // Settings:
 :idprefix:
 :idseparator: -
 //ifdef::env-github[:badges:]
 // Variables:
-:release-version: master
+:release-version: 1.0.0
 // URIs:
 :uri-raw-file-base: https://raw.githubusercontent.com/opendevise/bespoke-highlight/{release-version}
 

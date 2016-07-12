@@ -1,6 +1,6 @@
 {
   "name": "bespoke-highlight",
-  "version": "1.0.0-dev",
+  "version": "1.0.0",
   "description": "Highlights source code examples in a Bespoke.js presentation using Prism.",
   "homepage": "https://github.com/opendevise/bespoke-highlight",
   "bugs": "https://github.com/opendevise/bespoke-highlight/issues",
