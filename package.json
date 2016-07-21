@@ -1,6 +1,6 @@
 {
   "name": "bespoke-prism",
-  "version": "1.0.1-pre",
+  "version": "1.0.1",
   "description": "Highlights source code examples in a Bespoke.js presentation using Prism.",
   "homepage": "https://github.com/opendevise/bespoke-prism",
   "bugs": "https://github.com/opendevise/bespoke-prism/issues",
