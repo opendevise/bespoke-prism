@@ -6,7 +6,7 @@ v1.0.0, 2016-07-12
 :idseparator: -
 //ifdef::env-github[:badges:]
 // Variables:
-:release-version: 1.0.1-pre
+:release-version: 1.0.2-pre
 // URIs:
 :uri-raw-file-base: https://raw.githubusercontent.com/opendevise/bespoke-prism/{release-version}
 
