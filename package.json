@@ -9,6 +9,11 @@
     "url": "https://github.com/hsablonniere"
   },
   "main": "./dist/bespoke-prism.min.js",
+  "files": [
+    "dist",
+    "LICENSE.adoc",
+    "README.adoc"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/opendevise/bespoke-prism"
